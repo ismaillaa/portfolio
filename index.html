@@ -3,28 +3,37 @@
 <head>
   <meta charset="utf-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1" />
-  <title>Ismail Laaouan — Full‑Stack Web Developer</title>
-  <meta name="description" content="Full‑Stack Web Developer — Laravel, ASP.NET Core, MySQL. Portfolio of Ismail Laaouan." />
+  <title>Ismail Laaouan — Full-Stack Web Developer</title>
+  <meta name="description" content="Full-Stack Web Developer — Laravel, ASP.NET Core, MySQL. Portfolio of Ismail Laaouan." />
+
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;800&family=Inter:wght@400;600;800&display=swap" rel="stylesheet">
+
+  <!-- Styles + Script -->
   <link rel="stylesheet" href="styles.css" />
   <script defer src="script.js"></script>
-  <!-- FAVICON -->
-<link rel="icon" href="favicon.ico" sizes="16x16 32x32 48x48">
-<link rel="icon" type="image/png" href="favicon.png" sizes="180x180">
-<link rel="apple-touch-icon" href="favicon.png" sizes="180x180">
 
-
-
-
+  <!-- Favicons (place favicon.png + favicon.ico in repo root) -->
+  <link rel="icon" href="favicon.ico" sizes="16x16 32x32 48x48">
+  <link rel="icon" type="image/png" href="favicon.png" sizes="180x180">
+  <link rel="apple-touch-icon" href="favicon.png" sizes="180x180">
 </head>
 <body>
   <!-- HEADER / NAV -->
   <header class="site-header">
     <div class="container header-inner">
       <a class="logo" href="#home">Ismail<span>•</span>Laaouan</a>
-      <nav class="nav">
+
+      <!-- Mobile menu button -->
+      <button id="menuToggle" class="icon-btn" aria-label="Toggle menu" aria-expanded="false" aria-controls="primaryNav">
+        <svg width="26" height="26" viewBox="0 0 24 24" fill="none">
+          <path d="M4 7h16M4 12h16M4 17h16" stroke="currentColor" stroke-width="2" stroke-linecap="round"/>
+        </svg>
+      </button>
+
+      <!-- Nav links (use class 'nav' and id for JS) -->
+      <nav id="primaryNav" class="nav" aria-label="Primary">
         <a href="#home">Home</a>
         <a href="#about">About</a>
         <a href="#skills">Skills</a>
@@ -33,6 +42,7 @@
         <a href="#education">Education</a>
         <a href="#contact">Contact</a>
       </nav>
+
       <button id="themeToggle" class="btn ghost" aria-label="Toggle theme">🌓</button>
     </div>
   </header>
@@ -41,9 +51,9 @@
   <section id="home" class="hero">
     <div class="container hero-grid">
       <div class="hero-copy">
-        <div class="eyebrow">Full‑Stack Web Developer</div>
+        <div class="eyebrow">Full-Stack Web Developer</div>
         <h1 class="display">Building reliable apps with <span class="gradient">Laravel</span> & <span class="gradient">.NET Core</span></h1>
-        <p class="lead">Backend‑oriented developer focused on clean architecture, testing, and CI/CD. Passionate about solving real problems and shipping maintainable software.</p>
+        <p class="lead">Backend-oriented developer focused on clean architecture, testing, and CI/CD. Passionate about solving real problems and shipping maintainable software.</p>
         <div class="cta-row">
           <a class="btn primary" href="cv/LAAOUAN ISMAIL.pdf" target="_blank" rel="noreferrer">Download CV</a>
           <a class="btn" href="https://github.com/ismaillaa" target="_blank" rel="noreferrer">GitHub</a>
@@ -52,7 +62,7 @@
       </div>
       <div class="hero-card">
         <div class="avatar-wrap">
-          <img class="avatar" src="assets/avatar3.jpg" alt="Ismail profile photo (placeholder)" />
+          <img class="avatar" src="assets/avatar3.jpg" alt="Ismail profile photo" />
         </div>
         <ul class="hero-highlights">
           <li>Laravel • ASP.NET Core • SQL</li>
@@ -69,7 +79,7 @@
     <div class="container narrow">
       <h2 class="section-title">About</h2>
       <p class="muted">
-        Passionate full‑stack developer with strong backend focus. Comfortable across the stack with JavaScript/TypeScript, PHP, and C#, 
+        Passionate full-stack developer with strong backend focus. Comfortable across the stack with JavaScript/TypeScript, PHP, and C#,
         experienced with Laravel and ASP.NET Core, and disciplined about testing and deployment workflows.
         Fluent in English and French; adaptable, curious, and committed to continuous improvement.
       </p>
@@ -96,25 +106,12 @@
     <div class="container">
       <h2 class="section-title">Technical Skills</h2>
       <div class="chips">
-        <span class="chip">JavaScript</span>
-        <span class="chip">Java</span>
-        <span class="chip">HTML</span>
-        <span class="chip">CSS</span>
-        <span class="chip">PHP</span>
-        <span class="chip">C#</span>
-        <span class="chip">Laravel</span>
-        <span class="chip">ASP.NET Core</span>
-        <span class="chip">Vue.js</span>
-        <span class="chip">React (basics)</span>
-        <span class="chip">Flutter (basics)</span>
-        <span class="chip">MySQL</span>
-        <span class="chip">SQL Server</span>
-        <span class="chip">MongoDB</span>
-        <span class="chip">Git</span>
-        <span class="chip">Docker</span>
-        <span class="chip">GitHub Actions</span>
-        <span class="chip">Jira</span>
-        <span class="chip">GitLab</span>
+        <span class="chip">JavaScript</span><span class="chip">Java</span><span class="chip">HTML</span><span class="chip">CSS</span>
+        <span class="chip">PHP</span><span class="chip">C#</span><span class="chip">Laravel</span><span class="chip">ASP.NET Core</span>
+        <span class="chip">Vue.js</span><span class="chip">React (basics)</span><span class="chip">Flutter (basics)</span>
+        <span class="chip">MySQL</span><span class="chip">SQL Server</span><span class="chip">MongoDB</span>
+        <span class="chip">Git</span><span class="chip">Docker</span><span class="chip">GitHub Actions</span>
+        <span class="chip">Jira</span><span class="chip">GitLab</span>
       </div>
     </div>
     <div class="divider wave"></div>
@@ -153,52 +150,6 @@
     </div>
     <div class="divider"></div>
   </section>
-
-  <!-- PROJECTS -->
-  <!--<section id="projects" class="section alt">
-    <div class="container">
-      <h2 class="section-title">Projects</h2>
-      <div class="card-grid">
-        <article class="project card">
-          <div class="p-media"></div>
-          <div class="p-body">
-            <h3>Laboratory Management Application</h3>
-            <p>Laravel + Bootstrap app to streamline lab operations.</p>
-            <div class="tags">Laravel • PHP • MySQL • Bootstrap</div>
-            <div class="p-links">
-              <a class="btn" href="#" target="_blank">Repo (soon)</a>
-              <a class="btn ghost" href="#" target="_blank">Live (soon)</a>
-            </div>
-          </div>
-        </article>
-        <article class="project card">
-          <div class="p-media"></div>
-          <div class="p-body">
-            <h3>Employee Management Application</h3>
-            <p>Manage employee data with CRUD, validation, and reporting.</p>
-            <div class="tags">Laravel • PHP • MySQL</div>
-            <div class="p-links">
-              <a class="btn" href="#" target="_blank">Repo (soon)</a>
-              <a class="btn ghost" href="#" target="_blank">Live (soon)</a>
-            </div>
-          </div>
-        </article>
-        <article class="project card">
-          <div class="p-media"></div>
-          <div class="p-body">
-            <h3>RegistryApp (.NET MVC Core)</h3>
-            <p>Simple student registry web app created during internship.</p>
-            <div class="tags">ASP.NET MVC • C# • SQL Server</div>
-            <div class="p-links">
-              <a class="btn" href="#" target="_blank">Repo (soon)</a>
-              <a class="btn ghost" href="#" target="_blank">Live (soon)</a>
-            </div>
-          </div>
-        </article>
-      </div>
-    </div>
-    <div class="divider wave"></div>
-  </section>-->
 
   <!-- EDUCATION -->
   <section id="education" class="section">

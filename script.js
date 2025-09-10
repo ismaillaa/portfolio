@@ -19,5 +19,29 @@ const preferred = localStorage.getItem('theme') || (matchMedia('(prefers-color-s
 setTheme(preferred);
 if(toggle){ toggle.addEventListener('click', ()=> setTheme(root.classList.contains('light') ? 'dark' : 'light')); }
 
+// Mobile menu toggle
+const menuBtn = document.getElementById('menuToggle');
+const nav     = document.getElementById('primaryNav');
+if (menuBtn && nav) {
+  menuBtn.addEventListener('click', () => {
+    const open = nav.classList.toggle('open');
+    menuBtn.setAttribute('aria-expanded', open ? 'true' : 'false');
+  });
+  // close after clicking a link
+  nav.querySelectorAll('a').forEach(a => {
+    a.addEventListener('click', () => {
+      nav.classList.remove('open');
+      menuBtn.setAttribute('aria-expanded', 'false');
+    });
+  });
+  // optional: close on scroll
+  window.addEventListener('scroll', () => {
+    if (nav.classList.contains('open')) {
+      nav.classList.remove('open');
+      menuBtn.setAttribute('aria-expanded', 'false');
+    }
+  });
+}
+
 // Year
-document.getElementById('year').textContent = new Date().getFullYear();
+const y=document.getElementById('year'); if (y) y.textContent = new Date().getFullYear();
