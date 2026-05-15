@@ -1,7 +1,7 @@
 // ---------- i18n dictionary ----------
 const translations = {
   en: {
-    "meta.title": "Ismail Laaouan — ASP.NET Core Backend Developer",
+    "meta.title": "Portfolio",
     "meta.description": "Software Engineer specializing in ASP.NET Core, C#, and Entity Framework Core. Building clean, well-tested REST APIs.",
 
     "nav.home": "Home",
