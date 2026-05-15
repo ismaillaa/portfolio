@@ -28,7 +28,7 @@ const translations = {
     "about.availability.title": "Availability",
     "about.availability.body": "Open to Remote / Hybrid<br/>Internship & Junior .NET roles",
     "about.languages.title": "Languages",
-    "about.languages.body": "English (Professional)<br/>French (Fluent)<br/>Arabic (Native)",
+    "about.languages.body": "English (Intermediate)<br/>French (Intermediate)<br/>Arabic (Native)",
 
     "skills.title": "Technical Skills",
     "skills.dotnet": ".NET Core Stack",
