@@ -3,23 +3,19 @@
 <head>
   <meta charset="utf-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1" />
-  <title>Ismail Laaouan — Full-Stack Web Developer</title>
-  <meta name="description" content="Full-Stack Web Developer — Laravel, ASP.NET Core, MySQL. Portfolio of Ismail Laaouan." />
+  <title data-i18n="meta.title">Ismail Laaouan — ASP.NET Core Backend Developer</title>
+  <meta name="description" data-i18n-attr="content" data-i18n="meta.description" content="Software Engineer specializing in ASP.NET Core, C#, and Entity Framework Core. Building clean, well-tested REST APIs." />
 
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;800&family=Inter:wght@400;600;800&display=swap" rel="stylesheet">
 
-  <!-- Styles + Script -->
   <link rel="stylesheet" href="styles.css" />
   <script defer src="script.js"></script>
 
-  <!-- Favicons (place favicon.png + favicon.ico in repo root) -->
   <link rel="icon" href="favicon.ico" sizes="16x16 32x32 48x48">
   <link rel="icon" type="image/png" href="favicon.png" sizes="180x180">
   <link rel="apple-touch-icon" href="favicon.png" sizes="180x180">
-  <!--<img class="p-media" src="assets/your-image.jpg" alt="Project screenshot">-->
-
 </head>
 <body>
   <!-- HEADER / NAV -->
@@ -27,25 +23,28 @@
     <div class="container header-inner">
       <a class="logo" href="#home">Ismail<span>•</span>Laaouan</a>
 
-      <!-- Mobile menu button -->
       <button id="menuToggle" class="icon-btn" aria-label="Toggle menu" aria-expanded="false" aria-controls="primaryNav">
         <svg width="26" height="26" viewBox="0 0 24 24" fill="none">
           <path d="M4 7h16M4 12h16M4 17h16" stroke="currentColor" stroke-width="2" stroke-linecap="round"/>
         </svg>
       </button>
 
-      <!-- Nav links (use class 'nav' and id for JS) -->
       <nav id="primaryNav" class="nav" aria-label="Primary">
-        <a href="#home">Home</a>
-        <a href="#about">About</a>
-        <a href="#skills">Skills</a>
-        <a href="#experience">Experience</a>
-        <a href="#projects">Projects</a>
-        <a href="#education">Education</a>
-        <a href="#contact">Contact</a>
+        <a href="#home" data-i18n="nav.home">Home</a>
+        <a href="#about" data-i18n="nav.about">About</a>
+        <a href="#skills" data-i18n="nav.skills">Skills</a>
+        <a href="#experience" data-i18n="nav.experience">Experience</a>
+        <a href="#projects" data-i18n="nav.projects">Projects</a>
+        <a href="#education" data-i18n="nav.education">Education</a>
+        <a href="#contact" data-i18n="nav.contact">Contact</a>
       </nav>
 
-      <button id="themeToggle" class="btn ghost" aria-label="Toggle theme">🌓</button>
+      <div class="header-actions">
+        <button id="langToggle" class="btn ghost lang-btn" aria-label="Change language">
+          <span id="langLabel">FR</span>
+        </button>
+        <button id="themeToggle" class="btn ghost" aria-label="Toggle theme">🌓</button>
+      </div>
     </div>
   </header>
 
@@ -53,23 +52,26 @@
   <section id="home" class="hero">
     <div class="container hero-grid">
       <div class="hero-copy">
-        <div class="eyebrow">Full-Stack Web Developer</div>
-        <h1 class="display">Building reliable apps with <span class="gradient">Laravel</span> & <span class="gradient">.NET Core</span></h1>
-        <p class="lead">Backend-oriented developer focused on clean architecture, testing, and CI/CD. Passionate about solving real problems and shipping maintainable software.</p>
+        <div class="eyebrow" data-i18n="hero.eyebrow">ASP.NET Core Backend Developer</div>
+        <h1 class="display" data-i18n-html="hero.title">Building production-ready REST APIs with <span class="gradient">ASP.NET Core</span> &amp; <span class="gradient">C#</span></h1>
+        <p class="lead" data-i18n="hero.lead">
+          Software engineer specializing in .NET backend development — Clean Architecture, Entity Framework Core,
+          and well-tested REST APIs. Currently looking for junior .NET roles (remote or hybrid).
+        </p>
         <div class="cta-row">
-          <a class="btn primary" href="cv/LAAOUAN ISMAIL.pdf" target="_blank" rel="noreferrer">Download CV</a>
+          <a class="btn primary" href="cv/LAAOUAN ISMAIL.pdf" target="_blank" rel="noreferrer" data-i18n="hero.cta.cv">Download CV</a>
           <a class="btn" href="https://github.com/ismaillaa" target="_blank" rel="noreferrer">GitHub</a>
           <a class="btn" href="https://www.linkedin.com/in/ismail-laaouan/" target="_blank" rel="noreferrer">LinkedIn</a>
         </div>
       </div>
       <div class="hero-card">
         <div class="avatar-wrap">
-          <img class="avatar" src="assets/avatar3.jpg" alt="Ismail profile photo" />
+          <img class="avatar" src="assets/avatar3.jpeg" alt="Ismail Laaouan — ASP.NET Core Backend Developer" />
         </div>
-        <ul class="hero-highlights">
-          <li>Laravel • ASP.NET Core • SQL</li>
-          <li>Docker • GitHub Actions (CI/CD)</li>
-          <li>MySQL • SQL Server • MongoDB</li>
+        <ul class="hero-highlights">  
+          <li>ASP.NET Core • EF Core • C# 12</li>
+          <li data-i18n="hero.highlight2">Clean Architecture • REST • JWT</li>
+          <li>PostgreSQL • SQL Server • Docker</li>
         </ul>
       </div>
     </div>
@@ -79,24 +81,40 @@
   <!-- ABOUT -->
   <section id="about" class="section">
     <div class="container narrow">
-      <h2 class="section-title">About</h2>
-      <p class="muted">
-        Passionate full-stack developer with strong backend focus. Comfortable across the stack with JavaScript/TypeScript, PHP, and C#,
-        experienced with Laravel and ASP.NET Core, and disciplined about testing and deployment workflows.
-        Fluent in English and French; adaptable, curious, and committed to continuous improvement.
+      <h2 class="section-title" data-i18n="about.title">About</h2>
+      <p class="muted" data-i18n-html="about.p1">
+        I'm a final-year Computer Engineering student specializing in <strong>backend development with the .NET stack</strong>.
+        My goal is straightforward: become a software engineer who writes clean, well-tested ASP.NET Core code that other
+        developers actually enjoy maintaining.
       </p>
+      <p class="muted" data-i18n="about.p2">
+        I focus on the things that make a backend reliable in production — Clean Architecture and proper layering,
+        dependency injection, Entity Framework Core with thoughtful migrations, JWT authentication, validation,
+        DTOs, and clear OpenAPI documentation. I containerize my projects with Docker and automate builds and tests
+        with GitHub Actions.
+      </p>
+      <p class="muted" data-i18n="about.p3">
+        Beyond .NET, I've worked across the stack — Laravel, Spring Boot, Angular, and Vue.js — through three real
+        internships and academic projects. That breadth helps me design APIs that frontend developers can actually consume.
+        But .NET is where I'm investing for the long run.
+      </p>
+
       <div class="info-grid">
         <div class="card">
-          <h3>Location</h3>
-          <p>Morocco</p>
+          <h3 data-i18n="about.focus.title">Focus</h3>
+          <p data-i18n-html="about.focus.body">ASP.NET Core<br/>Backend & REST APIs</p>
         </div>
         <div class="card">
-          <h3>Contact</h3>
+          <h3 data-i18n="about.contact.title">Contact</h3>
           <p><a href="mailto:ismaillaa2003@gmail.com">ismaillaa2003@gmail.com</a><br/>+212 6 82 93 96 25</p>
         </div>
         <div class="card">
-          <h3>Availability</h3>
-          <p>Open to Remote / Hybrid</p>
+          <h3 data-i18n="about.availability.title">Availability</h3>
+          <p data-i18n-html="about.availability.body">Open to Remote / Hybrid<br/>Internship & Junior .NET roles</p>
+        </div>
+        <div class="card">
+          <h3 data-i18n="about.languages.title">Languages</h3>
+          <p data-i18n-html="about.languages.body">English (Professional)<br/>French (Fluent)<br/>Arabic (Native)</p>
         </div>
       </div>
     </div>
@@ -106,14 +124,78 @@
   <!-- SKILLS -->
   <section id="skills" class="section alt">
     <div class="container">
-      <h2 class="section-title">Technical Skills</h2>
-      <div class="chips">
-        <span class="chip">JavaScript</span><span class="chip">Java</span><span class="chip">HTML</span><span class="chip">CSS</span>
-        <span class="chip">PHP</span><span class="chip">C#</span><span class="chip">Laravel</span><span class="chip">ASP.NET Core</span>
-        <span class="chip">Vue.js</span><span class="chip">React (basics)</span><span class="chip">Flutter (basics)</span>
-        <span class="chip">MySQL</span><span class="chip">SQL Server</span><span class="chip">MongoDB</span>
-        <span class="chip">Git</span><span class="chip">Docker</span><span class="chip">GitHub Actions</span>
-        <span class="chip">Jira</span><span class="chip">GitLab</span>
+      <h2 class="section-title" data-i18n="skills.title">Technical Skills</h2>
+
+      <div class="skills-groups">
+
+        <div class="skill-block highlight">
+          <h3><span data-i18n="skills.dotnet">.NET Core Stack</span> <span class="badge-inline" data-i18n="skills.primary">Primary</span></h3>
+          <div class="chips">
+            <span class="chip">C#</span>
+            <span class="chip">ASP.NET Core</span>
+            <span class="chip">Entity Framework Core</span>
+            <span class="chip">LINQ</span>
+            <span class="chip" data-i18n="skills.di">Dependency Injection</span>
+            <span class="chip">Middleware</span>
+            <span class="chip">Minimal APIs</span>
+            <span class="chip">Razor / MVC</span>
+            <span class="chip" data-i18n="skills.jwt">JWT Authentication</span>
+            <span class="chip">Swagger / OpenAPI</span>
+            <span class="chip">AutoMapper</span>
+            <span class="chip">FluentValidation</span>
+            <span class="chip">xUnit</span>
+          </div>
+        </div>
+
+        <div class="skill-block">
+          <h3 data-i18n="skills.arch">Architecture & Practices</h3>
+          <div class="chips">
+            <span class="chip" data-i18n="skills.clean">Clean Architecture</span>
+            <span class="chip" data-i18n="skills.repo">Repository Pattern</span>
+            <span class="chip" data-i18n="skills.solid">SOLID Principles</span>
+            <span class="chip" data-i18n="skills.rest">REST API Design</span>
+            <span class="chip">DTOs</span>
+            <span class="chip" data-i18n="skills.unit">Unit Testing</span>
+            <span class="chip">Agile / Scrum</span>
+          </div>
+        </div>
+
+        <div class="skill-block">
+          <h3 data-i18n="skills.db">Databases</h3>
+          <div class="chips">
+            <span class="chip">SQL Server</span>
+            <span class="chip">PostgreSQL</span>
+            <span class="chip">MySQL</span>
+            <span class="chip">EF Core Migrations</span>
+            <span class="chip">MongoDB</span>
+          </div>
+        </div>
+
+        <div class="skill-block">
+          <h3 data-i18n="skills.devops">DevOps & Tools</h3>
+          <div class="chips">
+            <span class="chip">Docker</span>
+            <span class="chip">GitHub Actions (CI/CD)</span>
+            <span class="chip">Git</span>
+            <span class="chip">Postman</span>
+            <span class="chip">Visual Studio</span>
+            <span class="chip">JetBrains Rider</span>
+            <span class="chip">Jira</span>
+          </div>
+        </div>
+
+        <div class="skill-block">
+          <h3 data-i18n="skills.front">Frontend & Other Backends</h3>
+          <div class="chips">
+            <span class="chip">Vue.js</span>
+            <span class="chip">Angular</span>
+            <span class="chip">HTML / CSS / JS</span>
+            <span class="chip">Bootstrap</span>
+            <span class="chip">Laravel (PHP)</span>
+            <span class="chip">Spring Boot (Java)</span>
+          </div>
+        </div>
+
       </div>
     </div>
     <div class="divider wave"></div>
@@ -122,30 +204,43 @@
   <!-- EXPERIENCE -->
   <section id="experience" class="section">
     <div class="container">
-      <h2 class="section-title">Experience</h2>
+      <h2 class="section-title" data-i18n="exp.title">Experience</h2>
       <div class="timeline">
         <article class="t-item">
           <div class="t-dot"></div>
           <div class="t-content">
-            <h3>Laboratory Management App — Internship</h3>
-            <div class="t-meta">National Office of Electricity and Drinking Water, Water Branch (Rabat)</div>
-            <p>Built a functional application to streamline laboratory operations using Laravel and Bootstrap.</p>
+            <h3 data-i18n="exp.1.role">Web Developer Intern</h3>
+            <div class="t-meta" data-i18n="exp.1.company">Mesfournisseurs.be — Belgium (Remote)</div>
+            <p data-i18n-html="exp.1.desc">
+              Contributed to site maintenance and built responsive HTML newsletters.
+              Designed and delivered <strong>RegistryApp</strong>, a student registry web app built with
+              <strong>ASP.NET Core MVC</strong>, Entity Framework Core, and SQL Server, including authentication,
+              full CRUD, and server-side validation.
+            </p>
           </div>
         </article>
         <article class="t-item">
           <div class="t-dot"></div>
           <div class="t-content">
-            <h3>Employee Management App — Internship</h3>
-            <div class="t-meta">Regional Inspectorate of Urbanism, Architecture and Land Use Planning of the Oriental</div>
-            <p>Developed an application to manage employee data, improving organizational efficiency.</p>
+            <h3 data-i18n="exp.2.role">Backend Developer Intern</h3>
+            <div class="t-meta" data-i18n="exp.2.company">National Office of Electricity and Drinking Water (ONEE) — Rabat</div>
+            <p data-i18n-html="exp.2.desc">
+              Built a <strong>Laboratory Management web application</strong> to streamline lab operations —
+              sample tracking, test results, and reporting. Stack: Laravel, MySQL, Bootstrap.
+              Gained solid experience with MVC patterns, ORM design, and authentication flows that translate
+              directly to ASP.NET Core.
+            </p>
           </div>
         </article>
         <article class="t-item">
           <div class="t-dot"></div>
           <div class="t-content">
-            <h3>Web Maintenance & Newsletters — Internship</h3>
-            <div class="t-meta">Mesfournisseurs.be (Technology, Information, and Internet)</div>
-            <p>Contributed to site maintenance and created newsletters; built a simple student web application (RegistryApp) in .NET MVC Core.</p>
+            <h3 data-i18n="exp.3.role">Web Developer Intern</h3>
+            <div class="t-meta" data-i18n="exp.3.company">Regional Inspectorate of Urbanism & Land Use Planning — Oriental</div>
+            <p data-i18n-html="exp.3.desc">
+              Developed an <strong>Employee Management application</strong> with full CRUD, role-based access,
+              validation, and reporting — replacing manual spreadsheet workflows for the HR department.
+            </p>
           </div>
         </article>
       </div>
@@ -154,66 +249,84 @@
   </section>
 
   <!-- PROJECTS -->
-   <!--
   <section id="projects" class="section alt">
-  <div class="container">
-    <h2 class="section-title">Projects</h2>
+    <div class="container">
+      <h2 class="section-title" data-i18n="proj.title">Featured Projects</h2>
+      <p class="muted" style="text-align:center;margin-bottom:2rem;" data-i18n="proj.subtitle">
+        Selected work demonstrating my focus on .NET backend development and clean architecture.
+      </p>
 
-    <div class="card-grid">
-      <article class="project card">
-        <div class="p-media"></div>
-        <div class="p-body">
-          <h3>Laboratory Management Application</h3>
-          <p>Laravel + Bootstrap app to streamline lab operations.</p>
-          <div class="tags">Laravel • PHP • MySQL • Bootstrap</div>
-          <div class="p-links">
-            <a class="btn" href="#" target="_blank">Repo (soon)</a>
-            <a class="btn ghost" href="#" target="_blank">Live (soon)</a>
-          </div>
-        </div>
-      </article>
+      <div class="card-grid">
 
-      <article class="project card">
-        <div class="p-media"></div>
-        <div class="p-body">
-          <h3>Employee Management Application</h3>
-          <p>Manage employee data with CRUD, validation, and reporting.</p>
-          <div class="tags">Laravel • PHP • MySQL</div>
-          <div class="p-links">
-            <a class="btn" href="#" target="_blank">Repo (soon)</a>
-            <a class="btn ghost" href="#" target="_blank">Live (soon)</a>
+        <!-- Project 1: JobTracker API -->
+        <article class="project card">
+          <div class="p-body">
+            <h3>JobTracker API</h3>
+            <p data-i18n-html="proj.1.desc">
+              A production-grade REST API for tracking job applications through the hiring pipeline.
+              Built with <strong>ASP.NET Core</strong>, <strong>Entity Framework Core</strong>, and
+              <strong>PostgreSQL</strong>, structured around <strong>Clean Architecture</strong>
+              (Domain, Application, Infrastructure, API layers). Features JWT authentication, DTOs with
+              AutoMapper, FluentValidation, Swagger documentation, xUnit tests, and a Docker-based deployment
+              with a GitHub Actions CI/CD pipeline.
+            </p>
+            <div class="tags">ASP.NET Core • EF Core • PostgreSQL • Clean Architecture • JWT • Docker • xUnit • GitHub Actions</div>
+            <div class="p-links">
+              <a class="btn primary" href="https://github.com/ismaillaa" target="_blank" rel="noreferrer" data-i18n="proj.repo">Repo</a>
+            </div>
           </div>
-        </div>
-      </article>
+        </article>
 
-      <article class="project card">
-        <div class="p-media"></div>
-        <div class="p-body">
-          <h3>RegistryApp (.NET MVC Core)</h3>
-          <p>Simple student registry web app created during internship.</p>
-          <div class="tags">ASP.NET MVC • C# • SQL Server</div>
-          <div class="p-links">
-            <a class="btn" href="#" target="_blank">Repo (soon)</a>
-            <a class="btn ghost" href="#" target="_blank">Live (soon)</a>
+        <!-- Project 2: StudentRegistry -->
+        <article class="project card">
+          <div class="p-body">
+            <h3 data-i18n="proj.2.title">StudentRegistry — University Management</h3>
+            <p data-i18n-html="proj.2.desc">
+              An <strong>ASP.NET Core MVC</strong> web application for managing university student records,
+              built during my summer internship. Implements full authentication (register / login / logout),
+              CRUD operations, search by name or email, server-side validation, and a responsive Bootstrap UI.
+              Data layer uses <strong>Entity Framework Core</strong> with SQL Server and code-first migrations.
+            </p>
+            <div class="tags">.NET 8 • ASP.NET Core MVC • EF Core • SQL Server • Identity • Bootstrap</div>
+            <div class="p-links">
+              <a class="btn primary" href="https://github.com/ismaillaa/UniversityRegistryStudent" target="_blank" rel="noreferrer" data-i18n="proj.repo">Repo</a>
+            </div>
           </div>
-        </div>
-      </article>
+        </article>
+
+        <!-- Project 3: PFA -->
+        <article class="project card">
+          <div class="p-body">
+            <span class="badge in-progress" data-i18n="proj.inprogress">In Progress</span>
+            <h3 data-i18n="proj.3.title">PFA — Full-Stack Web Application</h3>
+            <p data-i18n-html="proj.3.desc">
+              My end-of-year project: a full-stack web application with a <strong>Spring Boot</strong>
+              REST API backend and an <strong>Angular</strong> SPA frontend, backed by PostgreSQL.
+              The codebase is split into separate frontend and backend repositories with a Git feature-branch
+              workflow and pull requests. While not .NET, this project sharpens the same backend fundamentals
+              I apply in ASP.NET Core: REST design, JPA / ORM relations, validation, and clean layering.
+            </p>
+            <div class="tags">Spring Boot • Angular • PostgreSQL • JPA • REST API • Git Flow</div>
+            <div class="p-links">
+              <a class="btn primary" href="https://github.com/ismaillaa" target="_blank" rel="noreferrer">GitHub</a>
+            </div>
+          </div>
+        </article>
+
+      </div>
     </div>
-  </div>
-  <div class="divider wave"></div>
-</section>
--->
-
-<!-- PROJECTS -->
+    <div class="divider wave"></div>
+  </section>
 
   <!-- EDUCATION -->
   <section id="education" class="section">
     <div class="container">
-      <h2 class="section-title">Education</h2>
+      <h2 class="section-title" data-i18n="edu.title">Education</h2>
       <ul class="edu">
-        <li><strong>Bachelor’s Degree</strong> — Web & Mobile Application Engineering, EST Salé (2024–2025)</li>
-        <li><strong>DUT</strong> — Computer Engineering, EST Salé (2022–2024)</li>
-        <li><strong>Baccalaureate</strong> — Experimental Sciences (Physics), Mohamed VI High School (Oujda) (2021–2022)</li>
+        <li data-i18n-html="edu.1"><strong>Engineering Degree</strong> — Computer Engineering (Génie Informatique), ENIAD Berkane (2025–Present) · 4th year</li>
+        <li data-i18n-html="edu.2"><strong>Bachelor's Degree</strong> — Web & Mobile Application Engineering, EST Salé (2024–2025)</li>
+        <li data-i18n-html="edu.3"><strong>DUT</strong> — Computer Engineering, EST Salé (2022–2024)</li>
+        <li data-i18n-html="edu.4"><strong>Baccalaureate</strong> — Experimental Sciences (Physics), Mohamed VI High School, Oujda (2021–2022)</li>
       </ul>
     </div>
     <div class="divider"></div>
@@ -222,12 +335,15 @@
   <!-- CONTACT -->
   <section id="contact" class="section alt">
     <div class="container narrow">
-      <h2 class="section-title">Contact</h2>
-      <p class="muted">Let’s build something great. Email me, or reach me on LinkedIn.</p>
+      <h2 class="section-title" data-i18n="contact.title">Let's Talk</h2>
+      <p class="muted" data-i18n-html="contact.body">
+        I'm actively looking for <strong>junior ASP.NET / .NET backend roles</strong> — remote or hybrid.
+        If you're hiring or want to chat about a project, I'd love to hear from you.
+      </p>
       <div class="contact-actions">
         <a class="btn primary" href="mailto:ismaillaa2003@gmail.com">ismaillaa2003@gmail.com</a>
-        <a class="btn" href="https://www.linkedin.com/in/ismail-laaouan/" target="_blank">LinkedIn</a>
-        <a class="btn" href="https://github.com/ismaillaa" target="_blank">GitHub</a>
+        <a class="btn" href="https://www.linkedin.com/in/ismail-laaouan/" target="_blank" rel="noreferrer">LinkedIn</a>
+        <a class="btn" href="https://github.com/ismaillaa" target="_blank" rel="noreferrer">GitHub</a>
       </div>
     </div>
   </section>
