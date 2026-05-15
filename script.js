@@ -104,7 +104,7 @@ const translations = {
     "about.availability.title": "Disponibilité",
     "about.availability.body": "Ouvert au télétravail / hybride<br/>Stages & postes junior .NET",
     "about.languages.title": "Langues",
-    "about.languages.body": "Anglais (Professionnel)<br/>Français (Courant)<br/>Arabe (Langue maternelle)",
+    "about.languages.body": "Anglais (Intermédiaire)<br/>Français (Intermédiaire)<br/>Arabe (Langue maternelle)",
 
     "skills.title": "Compétences techniques",
     "skills.dotnet": "Stack .NET Core",
