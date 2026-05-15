@@ -77,7 +77,7 @@ const translations = {
   },
 
   fr: {
-    "meta.title": "Ismail Laaouan — Développeur Backend ASP.NET Core",
+    "meta.title": "Portfolio",
     "meta.description": "Ingénieur logiciel spécialisé en ASP.NET Core, C# et Entity Framework Core. Conception d'APIs REST propres et testées.",
 
     "nav.home": "Accueil",
@@ -212,7 +212,7 @@ function setTheme(mode) {
   else root.classList.remove('light');
   localStorage.setItem('theme', mode);
 }
-const preferred = localStorage.getItem('theme') || (matchMedia('(prefers-color-scheme: light)').matches ? 'light' : 'dark');
+const preferred = localStorage.getItem('theme') || 'light';
 setTheme(preferred);
 if (themeBtn) themeBtn.addEventListener('click', () => setTheme(root.classList.contains('light') ? 'dark' : 'light'));
 
