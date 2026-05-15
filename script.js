@@ -28,7 +28,7 @@ const translations = {
     "about.availability.title": "Availability",
     "about.availability.body": "Open to Remote / Hybrid<br/>Internship & Junior .NET roles",
     "about.languages.title": "Languages",
-    "about.languages.body": "English (Intermediate)<br/>French (Intermediate)<br/>Arabic (Native)",
+    "about.languages.body": "French (Fluent)<br/>English (Professional working — B2)<br/>Arabic (Native)",
 
     "skills.title": "Technical Skills",
     "skills.dotnet": ".NET Core Stack",
@@ -104,7 +104,7 @@ const translations = {
     "about.availability.title": "Disponibilité",
     "about.availability.body": "Ouvert au télétravail / hybride<br/>Stages & postes junior .NET",
     "about.languages.title": "Langues",
-    "about.languages.body": "Anglais (Intermédiaire)<br/>Français (Intermédiaire)<br/>Arabe (Langue maternelle)",
+    "about.languages.body": "Français (Courant)<br/>Anglais (Professionnel — B2)<br/>Arabe (Langue maternelle)",
 
     "skills.title": "Compétences techniques",
     "skills.dotnet": "Stack .NET Core",
