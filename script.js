@@ -177,6 +177,9 @@ function applyLang(lang) {
   const langLabel = document.getElementById('langLabel');
   if (langLabel) langLabel.textContent = lang === 'fr' ? 'EN' : 'FR';
 
+  const cvLink = document.getElementById('cvLink');
+  if (cvLink) cvLink.setAttribute('href', lang === 'fr' ? 'cv/CV_Ismail_Laaouan_FR.pdf' : 'cv/CV_Ismail_Laaouan_EN.pdf');
+
   localStorage.setItem('lang', lang);
 }
 
