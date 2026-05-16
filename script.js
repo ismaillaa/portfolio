@@ -143,7 +143,7 @@ const translations = {
     "proj.3.desc": "Mon projet de fin d'année : une application web full-stack avec un backend API REST <strong>Spring Boot</strong> et un frontend SPA <strong>Angular</strong>, adossé à PostgreSQL. Le code est divisé en deux dépôts (frontend et backend) avec un workflow Git par feature branches et pull requests. Bien qu'il ne soit pas en .NET, ce projet renforce les mêmes fondamentaux backend que j'applique en ASP.NET Core : conception REST, relations JPA / ORM, validation et architecture propre.",
 
     "edu.title": "Formation",
-    "edu.1": "<strong>Cycle d'Ingénieur</strong> — Génie Informatique (ADIGI), ENIAD Berkane (2025–présent) · 4ème année",
+    "edu.1": "<strong>Cycle d'Ingénieur</strong> — Génie Informatique, ENIAD Berkane (2025–présent) · 4ème année",
     "edu.2": "<strong>Licence Professionnelle</strong> — Ingénierie des Applications Web et Mobiles, EST Salé (2024–2025)",
     "edu.3": "<strong>DUT</strong> — Génie Informatique, EST Salé (2022–2024)",
     "edu.4": "<strong>Baccalauréat</strong> — Sciences Expérimentales (Physique), Lycée Mohamed VI, Oujda (2021–2022)",
