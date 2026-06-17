@@ -63,8 +63,8 @@ const translations = {
     "proj.1.desc": "A production-grade REST API for tracking job applications through the hiring pipeline. Built with <strong>ASP.NET Core</strong>, <strong>Entity Framework Core</strong>, and <strong>PostgreSQL</strong>, structured around <strong>Clean Architecture</strong> (Domain, Application, Infrastructure, API layers). Features JWT authentication, DTOs with AutoMapper, FluentValidation, Swagger documentation, xUnit tests, and a Docker-based deployment with a GitHub Actions CI/CD pipeline.",
     "proj.2.title": "StudentRegistry — University Management",
     "proj.2.desc": "An <strong>ASP.NET Core MVC</strong> web application for managing university student records, built during my summer internship. Implements full authentication (register / login / logout), CRUD operations, search by name or email, server-side validation, and a responsive Bootstrap UI. Data layer uses <strong>Entity Framework Core</strong> with SQL Server and code-first migrations.",
-    "proj.3.title": "PFA — Full-Stack Web Application",
-    "proj.3.desc": "My end-of-year project: a full-stack web application with a <strong>Spring Boot</strong> REST API backend and an <strong>Angular</strong> SPA frontend, backed by PostgreSQL. The codebase is split into separate frontend and backend repositories with a Git feature-branch workflow and pull requests. While not .NET, this project sharpens the same backend fundamentals I apply in ASP.NET Core: REST design, JPA / ORM relations, validation, and clean layering.",
+    "proj.3.title": "Tawjihi — Post-Bac Guidance SaaS",
+    "proj.3.desc": "Full-stack SaaS platform helping Moroccan students choose their post-bac field, live at <a href=\"https://tawjihi.dev\" target=\"_blank\" rel=\"noreferrer\"><strong>tawjihi.dev</strong></a>. Features a 5-dimension <strong>recommendation engine</strong> (bac match, 75/25 pre-selection vs real seuils, employability, interests, RIASEC personality), an <strong>AI chatbot advisor</strong> powered by Gemini, a filière comparator, and 10 polished React pages. Backend: <strong>ASP.NET Core Web API</strong> with layered architecture, JWT auth, EF Core, Excel data import, and 27 xUnit tests. CI/CD via GitHub Actions, Docker (Alpine), deployed on Render + Vercel.",
 
     "edu.title": "Education",
     "edu.1": "<strong>Engineering Degree</strong> — Computer Engineering (Génie Informatique), ENIAD Berkane (2025–Present) · 4th year",
@@ -139,8 +139,8 @@ const translations = {
     "proj.1.desc": "Une API REST de qualité production pour le suivi des candidatures à travers le pipeline de recrutement. Construite avec <strong>ASP.NET Core</strong>, <strong>Entity Framework Core</strong> et <strong>PostgreSQL</strong>, structurée selon la <strong>Clean Architecture</strong> (couches Domain, Application, Infrastructure, API). Inclut l'authentification JWT, des DTOs avec AutoMapper, FluentValidation, la documentation Swagger, des tests xUnit et un déploiement Docker avec un pipeline CI/CD GitHub Actions.",
     "proj.2.title": "StudentRegistry — Gestion universitaire",
     "proj.2.desc": "Une application web <strong>ASP.NET Core MVC</strong> pour la gestion des étudiants universitaires, développée pendant mon stage d'été. Implémente l'authentification complète (inscription / connexion / déconnexion), les opérations CRUD, la recherche par nom ou email, la validation côté serveur et une interface Bootstrap responsive. La couche de données utilise <strong>Entity Framework Core</strong> avec SQL Server et des migrations code-first.",
-    "proj.3.title": "PFA — Application web full-stack",
-    "proj.3.desc": "Mon projet de fin d'année : une application web full-stack avec un backend API REST <strong>Spring Boot</strong> et un frontend SPA <strong>Angular</strong>, adossé à PostgreSQL. Le code est divisé en deux dépôts (frontend et backend) avec un workflow Git par feature branches et pull requests. Bien qu'il ne soit pas en .NET, ce projet renforce les mêmes fondamentaux backend que j'applique en ASP.NET Core : conception REST, relations JPA / ORM, validation et architecture propre.",
+    "proj.3.title": "Tawjihi — SaaS d'orientation post-bac",
+    "proj.3.desc": "Plateforme SaaS full-stack aidant les bacheliers marocains à choisir leur filière, en ligne sur <a href=\"https://tawjihi.dev\" target=\"_blank\" rel=\"noreferrer\"><strong>tawjihi.dev</strong></a>. Moteur de <strong>recommandation à 5 dimensions</strong> (correspondance bac, note de présélection 75/25 vs seuils réels, employabilité, intérêts, personnalité RIASEC), <strong>chatbot conseiller IA</strong> (Gemini), comparateur de filières et 10 pages React. Backend : <strong>ASP.NET Core Web API</strong> avec architecture en couches, JWT, EF Core, import Excel et 27 tests xUnit. CI/CD via GitHub Actions, Docker (Alpine), déployé sur Render + Vercel.",
 
     "edu.title": "Formation",
     "edu.1": "<strong>Cycle d'Ingénieur</strong> — Génie Informatique, ENIAD Berkane (2025–présent) · 4ème année",
@@ -158,7 +158,6 @@ function applyLang(lang) {
   document.documentElement.lang = lang;
   const dict = translations[lang] || translations.en;
 
-  // Plain text
   document.querySelectorAll('[data-i18n]').forEach(el => {
     const key = el.getAttribute('data-i18n');
     const attr = el.getAttribute('data-i18n-attr');
@@ -168,7 +167,6 @@ function applyLang(lang) {
     }
   });
 
-  // HTML
   document.querySelectorAll('[data-i18n-html]').forEach(el => {
     const key = el.getAttribute('data-i18n-html');
     if (dict[key] !== undefined) el.innerHTML = dict[key];

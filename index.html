@@ -68,7 +68,7 @@
         <div class="avatar-wrap">
           <img class="avatar" src="assets/avatar3.jpeg" alt="Ismail Laaouan — ASP.NET Core Backend Developer" />
         </div>
-        <ul class="hero-highlights">  
+        <ul class="hero-highlights">
           <li>ASP.NET Core • EF Core • C#</li>
           <li data-i18n="hero.highlight2">Clean Architecture • REST • JWT</li>
           <li>PostgreSQL • SQL Server • Docker</li>
@@ -119,7 +119,7 @@
       </div>
     </div>
     <div class="divider"></div>
-  </section> 
+  </section>
 
   <!-- SKILLS -->
   <section id="skills" class="section alt">
@@ -187,8 +187,10 @@
         <div class="skill-block">
           <h3 data-i18n="skills.front">Frontend & Other Backends</h3>
           <div class="chips">
+            <span class="chip">React</span>
             <span class="chip">Vue.js</span>
             <span class="chip">Angular</span>
+            <span class="chip">Tailwind CSS</span>
             <span class="chip">HTML / CSS / JS</span>
             <span class="chip">Bootstrap</span>
             <span class="chip">Laravel (PHP)</span>
@@ -294,21 +296,23 @@
           </div>
         </article>
 
-        <!-- Project 3: PFA -->
+        <!-- Project 3: Tawjihi -->
         <article class="project card">
           <div class="p-body">
-            <span class="badge in-progress" data-i18n="proj.inprogress">In Progress</span>
-            <h3 data-i18n="proj.3.title">PFA — Full-Stack Web Application</h3>
+            <span class="badge live">Live</span>
+            <h3 data-i18n="proj.3.title">Tawjihi — Post-Bac Guidance SaaS</h3>
             <p data-i18n-html="proj.3.desc">
-              My end-of-year project: a full-stack web application with a <strong>Spring Boot</strong>
-              REST API backend and an <strong>Angular</strong> SPA frontend, backed by PostgreSQL.
-              The codebase is split into separate frontend and backend repositories with a Git feature-branch
-              workflow and pull requests. While not .NET, this project sharpens the same backend fundamentals
-              I apply in ASP.NET Core: REST design, JPA / ORM relations, validation, and clean layering.
+              Full-stack SaaS platform helping Moroccan students choose their post-bac field, live at
+              <a href="https://tawjihi.dev" target="_blank" rel="noreferrer"><strong>tawjihi.dev</strong></a>.
+              Features a 5-dimension <strong>recommendation engine</strong> (bac match, 75/25 pre-selection vs real seuils,
+              employability, interests, RIASEC personality), an <strong>AI chatbot advisor</strong> powered by Gemini,
+              a filière comparator, and 10 polished React pages. Backend: <strong>ASP.NET Core Web API</strong> with
+              layered architecture, JWT auth, EF Core, Excel data import, and 27 xUnit tests. CI/CD via GitHub Actions,
+              Docker (Alpine), deployed on Render + Vercel.
             </p>
-            <div class="tags">Spring Boot • Angular • PostgreSQL • JPA • REST API • Git Flow</div>
+            <div class="tags">.NET 8 • React • Tailwind • PostgreSQL • Gemini AI • Docker • xUnit • CI/CD</div>
             <div class="p-links">
-              <a class="btn primary" href="https://github.com/ismaillaa" target="_blank" rel="noreferrer">GitHub</a>
+              <a class="btn primary" href="https://tawjihi.dev" target="_blank" rel="noreferrer">Live App</a>
             </div>
           </div>
         </article>
